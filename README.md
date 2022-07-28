@@ -6,7 +6,6 @@
   288  git init
   289  ll
   290  git config user.name "MigelAlfa"
-  291  git config user.email "migelalfa@gmail.com
   292  git config user.email "migelalfa@gmail.com"
   293  nano .gitognore
   294  ll
