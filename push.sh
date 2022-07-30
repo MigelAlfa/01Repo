@@ -3,6 +3,6 @@ git add .
 
 git commit -m "test1"
 
-git push origin "git@github.com:MigelAlfa/01Repo.git"
+git push -u origin master
 
 exit
