@@ -1,7 +1,5 @@
 #!/bin/bash
-git add .
-git commit -m "test2"
-git pull echo "Enter your message"
+echo "Enter your message"
 read message
 git add .
 git commit -m"${message}"
@@ -13,7 +11,3 @@ else
  echo "Pushing data to remote server!!!"
  git push -u origin master
 fi
-git push origin master
- 
-exit
-
