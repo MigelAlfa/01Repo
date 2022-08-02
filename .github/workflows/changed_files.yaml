@@ -3,10 +3,9 @@ name: changed_files
 on:
   push:
     branches:
-      - main
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -26,3 +25,7 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "$file was changed"
           done
+      - name: Upload report
+        uses: actions/upload-artifact@v2
+        with:
+          path: files.log
