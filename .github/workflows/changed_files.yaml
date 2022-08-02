@@ -1,8 +1,6 @@
 name: changed_files
 
 on:
-  push:
-    branches:
   pull_request:
     branches:
       - master
@@ -23,10 +21,11 @@ jobs:
       - name: List all changed files
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed" >> changed.log 2>&1
-            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> changed.log 2>&1
+            echo "$file was changed" >> changed.txt 2>&1
+            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> changed.txt 2>&1
           done
+
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
-          path: changed.log
+          path: changed.txt
