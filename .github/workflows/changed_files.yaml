@@ -1,6 +1,8 @@
 name: changed_files
 
 on:
+  push:
+    branches:
   pull_request:
     branches:
       - master
