@@ -1,6 +1,7 @@
-name: Changed_files
+name: Change-files
 
-on: pull_request
+
+on: [pull_request]
 
 jobs:
   build:
@@ -18,11 +19,14 @@ jobs:
       - name: List files
         run: |
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed" >> change.log 2>&1
-            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> change.log 2>&1
+
+            echo "$file was changed" >> changed.log 2>&1
+            echo "Count Tab in files: `grep -P '\t' $file | wc -l`" >> changed.log 2>&1
+
           done
 
       - name: Upload report
         uses: actions/upload-artifact@v2
         with:
-          path: change.log
+
+          path: changed.log
