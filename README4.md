@@ -1,9 +1,7 @@
 # 04 Vagrant
 
-```
 Ubuntu
 ```
-
 Vagrant.configure("2") do |config|
   config.vm.define "Centos" do |centos|
   config.vm.box = "centos/7"
@@ -26,11 +24,11 @@ cat /dev/null > ~/.bash_history && history -c && exit
 SHELL
    end
   end
-  
-```
-Centos
 ```
 
+Centos
+
+```
 Vagrant.configure("2") do |config|
 config.vm.define "Ubuntu" do |ubuntu|
     ubuntu.vm.box = "ubuntu/focal64"
@@ -50,12 +48,13 @@ sudo rm -rf /var/lib/apt/lists/*  /tmp/*  /var/tmp/* /usr/share/man /usr/share/d
     SHELL
   end
 end
-
 ```
+
 MigelAlfa/myVB
+
 ```
 Vagrant.configure("2") do |config|
   config.vm.box = "MigelAlfa/myVB"
   config.vm.box_version = "1.0.0"
 end
-
+```
